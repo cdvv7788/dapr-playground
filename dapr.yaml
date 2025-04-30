@@ -1,0 +1,16 @@
+version: 1
+apps:
+  - appID: agent-workflow
+    appDirPath: .
+    appPort: 8000
+    daprGRPCPort: 6000
+    daprHTTPPort: 3000
+    command: ["python3", "src/main.py"]
+    venv:
+      path: ../venv
+    logging:
+      level: debug
+      useJSONOutput: true
+      includeLogLevel: true
+      includeTimeStamp: true
+      includeCaller: true
